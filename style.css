@@ -31,6 +31,20 @@
   --tam-small: 0.875rem; /* 14px */
 }
 
+main{
+  margin: auto;
+}
+
+header{
+  background-color: var(--cor-primaria);
+  padding: var(--espaco-xs);
+}
+nav a, footer a{ /* linls nav(cima)*/
+  color: white;
+  text-decoration: none;
+  padding: var(--espaco-sm);
+}
+
 html {
   font-size: 100%; /* Mantém 16px base */
 }
@@ -41,6 +55,66 @@ body {
   line-height: 1.6;
   color: var(--cor-texto);
   background-color: var(--cor-fundo);
-  margin: 0;
+  margin: 0; 
   padding: 0;
 }
+
+
+.layout-wrapper{
+  display: grid ;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--espaco-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--espaco-md);
+  align-items: start;
+}
+
+article, aside, .edu-box{
+  background: var(--cor-fundo-card);
+  padding: var(--espaco-md);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  margin-bottom: var(--espaco-md);
+
+}
+
+.edu-box{
+  border-left: 4px solid var(--cor-primaria);
+  background: #f0fdfa;
+}
+
+.info-box{
+  border-left: 4px solid var(--cor-primaria);
+  background: #f0fdfa;
+  padding: var(--espaco-sm);
+}
+
+a{
+  color: var(--cor-primaria-hover);
+  text-decoration: none;
+}
+
+footer{
+  background: var(--cor-texto);
+  color: var(--cor-fundo);
+  text-align: center;
+  padding: var(--espaco-md);
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--cor-primaria);
+}
+
+aside{
+  color: gray;  
+}
+/*PAra funcionar para pc e celular dinanismo na tela*/
+@media screen and (min-width: 768px){
+  .layout-wrapper{
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
